@@ -30,15 +30,16 @@ const Login = () => {
     setLoading(true);
 
     try {
-      await login(
-        { 
-          username: formData.username, 
-          password: formData.password 
-        }, 
-        formData.rememberMe
-      );
+      const loginData = {
+        usernameOrEmail: formData.username, // Backend mong đợi usernameOrEmail
+        password: formData.password
+      };
+      
+      console.log('Sending login data:', loginData);
+      await login(loginData, formData.rememberMe);
       navigate('/'); // Redirect to home after successful login
     } catch (err) {
+      console.error('Login error:', err);
       setError(
         err.response?.data?.message || 
         'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.'

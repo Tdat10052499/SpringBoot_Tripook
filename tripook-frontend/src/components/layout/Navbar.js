@@ -52,6 +52,22 @@ const Navbar = () => {
               <span>Khách sạn</span>
             </Link>
 
+            <Link 
+              to="/test-api" 
+              className="flex items-center space-x-1 text-red-600 hover:text-red-800 transition-colors"
+            >
+              <Settings size={18} />
+              <span>Test API</span>
+            </Link>
+
+            <Link 
+              to="/real-signup-test" 
+              className="flex items-center space-x-1 text-green-600 hover:text-green-800 transition-colors"
+            >
+              <UserPlus size={18} />
+              <span>Real Signup Test</span>
+            </Link>
+
             {isAuthenticated && isUser && (
               <Link 
                 to="/bookings" 

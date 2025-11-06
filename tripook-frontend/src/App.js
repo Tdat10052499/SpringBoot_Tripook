@@ -5,6 +5,8 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ApiTestComponent from './components/ApiTestComponent';
+import RealSignupTest from './components/RealSignupTest';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -24,7 +26,7 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            {/* Public Routes */}
+            {/* Public Routes - No Layout */}
             <Route 
               path="/login" 
               element={
@@ -48,6 +50,26 @@ function App() {
               element={
                 <Layout>
                   <Home />
+                </Layout>
+              } 
+            />
+            
+            {/* API Test Route */}
+            <Route 
+              path="/test-api" 
+              element={
+                <Layout>
+                  <ApiTestComponent />
+                </Layout>
+              } 
+            />
+            
+            {/* Real Signup Test Route */}
+            <Route 
+              path="/real-signup-test" 
+              element={
+                <Layout>
+                  <RealSignupTest />
                 </Layout>
               } 
             />

@@ -1,97 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Calendar, Users, Star, Award, Shield, Clock } from 'lucide-react';
+import { Search, Star, Award, Shield, Clock } from 'lucide-react';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-booking-primary to-blue-800 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Tìm kiếm chỗ ở hoàn hảo
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Từ khách sạn sang trọng đến homestay ấm cúng - Tripook có tất cả cho chuyến đi của bạn
-            </p>
-            
-            {/* Search Bar */}
-            <div className="bg-white rounded-lg p-6 shadow-2xl max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                {/* Destination */}
-                <div className="relative">
-                  <label className="block text-sm font-medium text-booking-text mb-2">
-                    Điểm đến
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="text"
-                      placeholder="Bạn muốn đi đâu?"
-                      className="w-full pl-10 pr-3 py-3 border border-booking-border rounded-md text-booking-text focus:outline-none focus:ring-2 focus:ring-booking-primary focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Check-in */}
-                <div className="relative">
-                  <label className="block text-sm font-medium text-booking-text mb-2">
-                    Ngày nhận phòng
-                  </label>
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="date"
-                      className="w-full pl-10 pr-3 py-3 border border-booking-border rounded-md text-booking-text focus:outline-none focus:ring-2 focus:ring-booking-primary focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Check-out */}
-                <div className="relative">
-                  <label className="block text-sm font-medium text-booking-text mb-2">
-                    Ngày trả phòng
-                  </label>
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="date"
-                      className="w-full pl-10 pr-3 py-3 border border-booking-border rounded-md text-booking-text focus:outline-none focus:ring-2 focus:ring-booking-primary focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Guests */}
-                <div className="relative">
-                  <label className="block text-sm font-medium text-booking-text mb-2">
-                    Số khách
-                  </label>
-                  <div className="relative">
-                    <Users className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <select className="w-full pl-10 pr-3 py-3 border border-booking-border rounded-md text-booking-text focus:outline-none focus:ring-2 focus:ring-booking-primary focus:border-transparent">
-                      <option>1 khách</option>
-                      <option>2 khách</option>
-                      <option>3 khách</option>
-                      <option>4+ khách</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Search Button */}
-              <div className="mt-6">
-                <Link
-                  to="/accommodations"
-                  className="w-full bg-primary-red text-white py-3 px-6 rounded-md hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 text-lg font-semibold"
-                >
-                  <Search size={20} />
-                  <span>Tìm kiếm</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+      <section className="bg-gradient-to-r from-booking-primary to-blue-800 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Tìm kiếm chỗ ở hoàn hảo
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            Từ khách sạn sang trọng đến homestay ấm cúng - Tripook có tất cả cho chuyến đi của bạn
+          </p>
         </div>
       </section>
 

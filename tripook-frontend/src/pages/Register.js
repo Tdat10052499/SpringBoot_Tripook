@@ -58,15 +58,22 @@ const Register = () => {
     setLoading(true);
 
     try {
+      // Split fullName into firstName and lastName
+      const nameParts = formData.fullName.trim().split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ') || '';
+
       const userData = {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        fullName: formData.fullName,
+        firstName: firstName,
+        lastName: lastName,
         phoneNumber: formData.phoneNumber,
-        role: ['user'], // Default role
+        role: 'GUEST', // Default role as string
       };
 
+      console.log('Sending userData:', userData);
       await register(userData);
       setSuccess('Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.');
       
@@ -75,6 +82,7 @@ const Register = () => {
         navigate('/login');
       }, 2000);
     } catch (err) {
+      console.error('Registration error:', err);
       setError(
         err.response?.data?.message || 
         'Đăng ký thất bại. Vui lòng kiểm tra lại thông tin.'

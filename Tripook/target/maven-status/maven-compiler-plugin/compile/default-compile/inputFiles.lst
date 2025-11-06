@@ -1,5 +1,6 @@
 C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\config\WebSecurityConfig.java
 C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\controller\AuthController.java
+C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\controller\PublicController.java
 C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\controller\TestController.java
 C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\dto\request\LoginRequest.java
 C:\Users\tdat1\SpringBoot_Tripook\Tripook\src\main\java\com\AccomodationWebApp\Tripook\dto\request\SignupRequest.java

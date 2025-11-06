@@ -29,7 +29,7 @@ import com.AccomodationWebApp.Tripook.security.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -70,6 +70,14 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+        System.out.println("=== SIGNUP REQUEST DEBUG ===");
+        System.out.println("Username: " + signUpRequest.getUsername());
+        System.out.println("Email: " + signUpRequest.getEmail());
+        System.out.println("FirstName: " + signUpRequest.getFirstName());
+        System.out.println("LastName: " + signUpRequest.getLastName());
+        System.out.println("Role: " + signUpRequest.getRole());
+        System.out.println("============================");
+        
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Error: Username is already taken!"));
